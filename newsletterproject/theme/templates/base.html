@@ -1,0 +1,44 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="description" content="Your meta description here">
+		<meta name="keywords" content="your, meta, keywords, here">
+		<title>{% block title %} {% endblock title %}</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		{% tailwind_css %}
+	</head>
+
+	<header>
+		{% include "partials/_header.html" %}
+
+	</header>
+	
+	<body class="">
+		<div class="">
+			{% block body %}
+			{% endblock body %}
+		</div>
+		
+		<!-- Theme Switch JS -->										
+		<script>
+			const storedTheme = localStorage.getItem('selectedTheme');
+			if (storedTheme) {
+			  document.documentElement.setAttribute('data-theme', storedTheme);
+			  document.getElementById('themeSelector').checked = storedTheme !== 'autumn';
+			}
+			
+			const themeSelector = document.getElementById('themeSelector');
+			themeSelector.addEventListener('change', handleThemeChange);
+		
+			function handleThemeChange() {
+			  const selectedTheme = themeSelector.checked ? themeSelector.value : 'autumn';
+			  document.documentElement.setAttribute('data-theme', selectedTheme);
+			  localStorage.setItem('selectedTheme', selectedTheme);
+			}
+		</script>
+		<!-- Theme Switch JS -->								
+	</body>
+</html>
