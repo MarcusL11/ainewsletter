@@ -1,115 +1,205 @@
-{% extends '../base.html' %}
+{% extends "../base.html" %}
 {% block title %}
 Home
 {% endblock title %}
 {% block body %}
-<main class="container mx-auto flex w-full flex-col">
-    <div class="mx-auto mb-12 pt-8 ">
-        <div class="flex flex-col md:flex-row gap-8">
-            <!-- Main  Picture-->
-            <div class="w-full">                
-                <a class="flex flex-col rounded shadow-xl" href="">
-                    <img src="https://placehold.co/800x420" class="rounded-lg " width="800" height="420" alt="">
-                    <h2 class="text-2xl sm:text-4xl font-bold wt-header-font">ALSO: courtroom drama, job search prompts, and a looming deadline</h2>
-                </a>
-            </div>
-            <!-- Main  Picture-->
+<main class="flex flex-grow px-4 sm:px-0">
+    <div class="flex flex-col">
+        <div class="flex min-h-screen flex-col px-6">
+            <div class="mx-auto pt-8 ">
+                <div class="flex flex-col md:flex-row sm:gap-2">
+                    <!-- Main  Picture-->
+                    <div class="w-full md:w-2/3">                
+                        <a class="group relative flex w-full flex-col overflow-hidden rounded shadow-xl" href="">
+                            <div class="w-full overflow-hidden rounded-xs">
+                                <figure class="aspect-social relative h-full w-full">
+                                    <img src="https://placehold.co/800x420" class="rounded-lg inset-0 h-full w-full object-cover " width="800" height="421" alt="">
+                                </figure>
+                            </div>
+                            <div class="absolute top-6 left-6">
+                                <div class="px-2 py-1">
+                                    <spand class="font-semibold capitalize text-white">Featured</span>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-0 flex h-full w-full flex-col justify-end space-y-1 bg-black bg-opacity-20 p-4 transition-all group-hover:bg-opacity-0">
+                                <h2 class="text-2xl sm:text-2xl font-bold">ALSO: courtroom drama, job search prompts, and a looming deadline deadline</h2>
+                            </div>
+                        </a>                    
+                        <div class="flex-row flex mt-4">
+                            <input type="text" placeholder="E-mail" class="input input-bordered w-full" />
+                            <button class="btn btn-primary">Subscribe</button>        
+                        </div>
+                    </div>
+                    <!-- Main  Picture-->
 
-            <!-- Side Blog Posts-->
-            <div class="py-6 sm:py-10 flex flex-col">
-                <div class="w-full">
-                    <div class="mb-4 border-b-2 border-primary">
-                        <!-- TODO: Django Template Langauge Blog Stores-->
-                        <a class="flex " href="">
-                            <div class="flex items-center justify-between space-x-1">
-                                <div class="flex-col">
-                                    <h2 class="text-md sm:text-lg font-bold">Elon Musk sues OpenAI</h2>
-                                    <p class="text-xs sm:text-sm font-regular">ALSO: How to automate research with ChatGPT</p>
+                    <!-- Side Blog Posts-->
+                    <div class="mt-4 sm:mt-0 w-full md:w-1/3 md:pr-12 ">
+                        <div class="mb-4 border-b-2 border-primary duration-500 hover:scale-105">
+                            <!-- TODO: Django Template Langauge Blog Stores-->
+                            <a class="flex" href="">
+                                <div class="flex items-center justify-between space-x-1">
+                                    <div class="flex-col">
+                                        <h2 class="text-md sm:text-lg font-bold">Elon Musk sues OpenAI</h2>
+                                        <p class="text-xs sm:text-sm font-regular">ALSO: How to automate research with ChatGPT</p>
+                                    </div>
+                                    <!-- SVG Arrow-->
+                                    <div class="h-fit rounded-full border p-2 end-0" >
+                                    </div>
+                                    <!-- SVG Arrow-->
                                 </div>
-                                <!-- SVG Arrow-->
-                                <div class="h-fit rounded-full border p-2" >
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="h-6 w-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
-                                    </svg>
+                            </a>
+                            <!-- TODO: Django Template Langauge Blog Stores-->
+                        </div>                                             
+                        <div class="mb-4 border-b-2 border-primary duration-500 hover:scale-105">
+                            <!-- TODO: Django Template Langauge Blog Stores-->
+                            <a class="flex" href="">
+                                <div class="flex items-center justify-between space-x-1">
+                                    <div class="flex-col">
+                                        <h2 class="text-md sm:text-lg font-bold">Elon Musk sues OpenAI</h2>
+                                        <p class="text-xs sm:text-sm font-regular">ALSO: How to automate research with ChatGPT</p>
+                                    </div>
+                                    <!-- SVG Arrow-->
+                                    <div class="h-fit rounded-full border p-2 end-0" >
+                                    </div>
+                                    <!-- SVG Arrow-->
                                 </div>
-                                <!-- SVG Arrow-->
-                            </div>
-                        </a>
-                        <!-- TODO: Django Template Langauge Blog Stores-->
+                            </a>
+                            <!-- TODO: Django Template Langauge Blog Stores-->
+                        </div>                                             
+                        <div class="mb-4 border-b-2 border-primary duration-500 hover:scale-105">
+                            <!-- TODO: Django Template Langauge Blog Stores-->
+                            <a class="flex" href="">
+                                <div class="flex items-center justify-between space-x-1">
+                                    <div class="flex-col">
+                                        <h2 class="text-md sm:text-lg font-bold">Elon Musk sues OpenAI</h2>
+                                        <p class="text-xs sm:text-sm font-regular">ALSO: How to automate research with ChatGPT</p>
+                                    </div>
+                                    <!-- SVG Arrow-->
+                                    <div class="h-fit rounded-full border p-2 end-0" >
+                                    </div>
+                                    <!-- SVG Arrow-->
+                                </div>
+                            </a>
+                            <!-- TODO: Django Template Langauge Blog Stores-->
+                        </div>                                             
+                        <div class="mb-4 border-b-2 border-primary duration-500 hover:scale-105">
+                            <!-- TODO: Django Template Langauge Blog Stores-->
+                            <a class="flex" href="">
+                                <div class="flex items-center justify-between space-x-1">
+                                    <div class="flex-col">
+                                        <h2 class="text-md sm:text-lg font-bold">Elon Musk sues OpenAI</h2>
+                                        <p class="text-xs sm:text-sm font-regular">ALSO: How to automate research with ChatGPT</p>
+                                    </div>
+                                    <!-- SVG Arrow-->
+                                    <div class="h-fit rounded-full border p-2 end-0" >
+                                    </div>
+                                    <!-- SVG Arrow-->
+                                </div>
+                            </a>
+                            <!-- TODO: Django Template Langauge Blog Stores-->
+                        </div>                                                                                                                     
                     </div>
-                    <div class="mb-4 border-b-2 border-primary">
-                        <!-- TODO: Django Template Langauge Blog Stores-->
-                        <a class="flex " href="">
-                            <div class="flex items-center justify-between space-x-1">
-                                <div class="flex-col">
-                                    <h2 class="text-md sm:text-lg font-bold">Elon Musk sues OpenAI</h2>
-                                    <p class="text-xs sm:text-sm font-regular">ALSO: How to automate research with ChatGPT</p>
-                                </div>
-                                <!-- SVG Arrow-->
-                                <div class="h-fit rounded-full border p-2" >
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="h-6 w-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
-                                    </svg>
-                                </div>
-                                <!-- SVG Arrow-->
-                            </div>
-                        </a>
-                        <!-- TODO: Django Template Langauge Blog Stores-->
-                    </div>
-                    <div class="mb-4 border-b-2 border-primary">
-                        <!-- TODO: Django Template Langauge Blog Stores-->
-                        <a class="flex " href="">
-                            <div class="flex items-center justify-between space-x-1">
-                                <div class="flex-col">
-                                    <h2 class="text-md sm:text-lg font-bold">Elon Musk sues OpenAI</h2>
-                                    <p class="text-xs sm:text-sm font-regular">ALSO: How to automate research with ChatGPT</p>
-                                </div>
-                                <!-- SVG Arrow-->
-                                <div class="h-fit rounded-full border p-2" >
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="h-6 w-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
-                                    </svg>
-                                </div>
-                                <!-- SVG Arrow-->
-                            </div>
-                        </a>
-                        <!-- TODO: Django Template Langauge Blog Stores-->
-                    </div>
-                    <div class="mb-4 border-b-2 border-primary">
-                        <!-- TODO: Django Template Langauge Blog Stores-->
-                        <a class="flex " href="">
-                            <div class="flex items-center justify-between space-x-1">
-                                <div class="flex-col">
-                                    <h2 class="text-md sm:text-lg font-bold">Elon Musk sues OpenAI</h2>
-                                    <p class="text-xs sm:text-sm font-regular">ALSO: How to automate research with ChatGPT</p>
-                                </div>
-                                <!-- SVG Arrow-->
-                                <div class="h-fit rounded-full border p-2" >
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="h-6 w-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
-                                    </svg>
-                                </div>
-                                <!-- SVG Arrow-->
-                            </div>
-                        </a>
-                        <!-- TODO: Django Template Langauge Blog Stores-->
-                    </div>                                                                                
+                    <!-- Side Blog Posts-->
+                </div>            
+                    <!-- TODO: Subscribe Newsletter-->
+                    <!-- TODO: Subscribe Newsletter-->                    
+                
+                <div class="flex flex-col md:flex-row">
+                    <!-- TODO: Search Input-->
+                    <input type="text" placeholder="Search post..." class="mt-10 sm:mt-20 input input-bordered w-full" />            
                 </div>
+                    <!-- TODO: Search Input-->
+                                        
+                <!-- TODO: Blog Post Grid-->
+                <div class="grid w-full grid-cols-12">
+                    <div class="order-last col-span-12 py-2 lg:order-first mb-8">
+                        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+                            <div class="group h-full overflow-hidden transition-all shadow-none hover:shadow-none rounded-lg">
+                                <a class="group flex h-full w-full border transition-all group-hover:brightness-110 rounded-lg flex-col">
+                                    <div class="w-full">
+                                        <div class="w-full overflow-hidden rounded-lg">
+                                            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                                            <div class="card-body">
+                                                <h2 class="card-title">Title of the Post</h2>
+                                                <p>ALSO: Something else about this post</p>
+                                                <div class="card-actions justify-end">                                        
+                                                    <p class="flex flex-col space-y-1 no-underline opacity-75 text-sm font-regular wt-body-font">
+                                                        <span class="text-xs font-semibold">Author</span>
+                                                        <time datetime="2021-08-24T00:00:00Z">24 hours ago</time>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="group h-full overflow-hidden transition-all shadow-none hover:shadow-none rounded-lg">
+                                <a class="group flex h-full w-full border transition-all group-hover:brightness-110 rounded-lg flex-col">
+                                    <div class="w-full">
+                                        <div class="w-full overflow-hidden rounded-lg">
+                                            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                                            <div class="card-body">
+                                                <h2 class="card-title">Title of the Post</h2>
+                                                <p>ALSO: Something else about this post</p>
+                                                <div class="card-actions justify-end">                                        
+                                                    <p class="flex flex-col space-y-1 no-underline opacity-75 text-sm font-regular wt-body-font">
+                                                        <span class="text-xs font-semibold">Author</span>
+                                                        <time datetime="2021-08-24T00:00:00Z">24 hours ago</time>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="group h-full overflow-hidden transition-all shadow-none hover:shadow-none rounded-lg">
+                                <a class="group flex h-full w-full border transition-all group-hover:brightness-110 rounded-lg flex-col">
+                                    <div class="w-full">
+                                        <div class="w-full overflow-hidden rounded-lg">
+                                            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                                            <div class="card-body">
+                                                <h2 class="card-title">Title of the Post</h2>
+                                                <p>ALSO: Something else about this post</p>
+                                                <div class="card-actions justify-end">                                        
+                                                    <p class="flex flex-col space-y-1 no-underline opacity-75 text-sm font-regular wt-body-font">
+                                                        <span class="text-xs font-semibold">Author</span>
+                                                        <time datetime="2021-08-24T00:00:00Z">24 hours ago</time>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="group h-full overflow-hidden transition-all shadow-none hover:shadow-none rounded-lg">
+                                <a class="group flex h-full w-full border transition-all group-hover:brightness-110 rounded-lg flex-col">
+                                    <div class="w-full">
+                                        <div class="w-full overflow-hidden rounded-lg">
+                                            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                                            <div class="card-body">
+                                                <h2 class="card-title">Title of the Post</h2>
+                                                <p>ALSO: Something else about this post</p>
+                                                <div class="card-actions justify-end">                                        
+                                                    <p class="flex flex-col space-y-1 no-underline opacity-75 text-sm font-regular wt-body-font">
+                                                        <span class="text-xs font-semibold">Author</span>
+                                                        <time datetime="2021-08-24T00:00:00Z">24 hours ago</time>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>                                                                
+
+                        </div>
+                    </div>
+                </div>
+                <!-- TODO: Blog Post Grid--> 
+                
             </div>
-            <!-- Side Blog Posts-->
-
-            <!-- TODO: Subscribe Newsletter-->
-            <!-- TODO: Subscribe Newsletter-->
-
-            <!-- TODO: Search Input-->
-            <!-- TODO: Search Input-->
-            
-            <!-- TODO: Blog Post Grid-->
-            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                <div class="group h-full overflow-hidden transition-all shadow-none hover:shadow-none rounded-lg">                        
-            <!-- TODO: Blog Post Grid-->                    
-
         </div>
     </div>
 </main>    
-{% endblock %}
+{% endblock body %}

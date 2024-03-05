@@ -46,9 +46,6 @@ module.exports = {
             center: true,
             padding: {
                 DEFAULT: '1rem',
-                md: '2rem',
-                lg: '3rem',
-                xl: '4rem',
             },
         },        
         extend: {},
