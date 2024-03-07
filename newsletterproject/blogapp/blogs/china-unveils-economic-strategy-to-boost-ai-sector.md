@@ -3,7 +3,7 @@ Title: China Unveils Economic Strategy to Boost AI Sector
 Subtitle: India tightens AI regulation, concerns over AI in voting, and the impact on the metals market
 Tags: China, AI Strategy, Economic Policy, India, AI Regulation, Voting Technology, Metals Market, Global AI Trends
 Author: Marcel A. Lee
-Published Date: 2024-01-04
+Published Date: 2024-03-05
 ---
 
 ## China Unveils Economic Strategy to Boost AI Sector 

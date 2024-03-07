@@ -3,7 +3,7 @@ from .models import BlogPost
 from django.http import Http404
 
 def home(request):    
-    blogs = BlogPost.objects.all()
+    blogs = BlogPost.objects.all().order_by('-publish_date')
     latest_blog = blogs.first()
     
     context = {

@@ -4,7 +4,7 @@
 Home
 {% endblock title %}
 {% block body %}
-<main class="flex flex-grow px-4 sm:px-0">
+<main class="flex flex-grow px-4 sm:px-0 mb-10">
     <div class="flex flex-col">
         <div class="flex min-h-screen flex-col px-6">
             <div class="mx-auto pt-8 ">
@@ -37,8 +37,8 @@ Home
                             <a class="flex no-underline" href="{% url 'blog' slug=blog.slug %}"> 
                                 <div class="flex items-center justify-between space-x-1">
                                     <div class="flex-col">
-                                        <h2 class="border-t-0 text-md sm:text-xl lg:text-2xl font-bold">{{ blog.title }}</h2>
-                                        <p class="text-xs sm:text-sm lg:text-lg xl:text-xl font-regular">MORE: {{ blog.subtitle }}</p>
+                                        <h2 class="border-t-0 text-sm lg:text-xl font-bold">{{ blog.title }}</h2>
+                                        <p class="text-xs lg:text-lg xl:text-xl font-regular">MORE: {{ blog.subtitle }}</p>
                                     </div>
                                     <!-- SVG Arrow-->
                                     <div class="h-fit rounded-full border-2 border-primary p-2 end-0" >
@@ -60,43 +60,35 @@ Home
                     <!-- TODO: Search Input-->
                                         
                 <!-- TODO: Blog Post Grid-->
-                <div class="grid w-full grid-cols-12">
-                    <div class="order-last col-span-12 py-2 lg:order-first mb-8">
-                        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-
-                            {% for blog in blogs %}
-                            <div class="hover:scale-105 duration-500 group shadow-xl h-full overflow-hidden transition-all hover:shadow-none rounded-lg">
-                                <a href="{% url 'blog' slug=blog.slug %}" class="no-underline group flex h-full w-full border transition-all group-hover:brightness-110 rounded-lg flex-col">
-                                    <div class="w-full">
-                                        <div class="w-full overflow-hidden rounded-lg">
-                                            <figure>
-                                                <img src="{% static 'image/blog-images/'|add:blog.slug|add:'.webp' %}" alt="{{ blog.slug }}"/>
-                                            </figure>
-                                            <div class="card-body pt-0">
-                                                <h2 class=" border-t-0 card-title">{{ blog.title }}</h2>
-                                                <p>MORE: {{ blog.subtitle }}</p>
-                                                <div class="card-actions items-center">
-                                                    <div class="avatar">
-                                                        <div class="w-10 rounded-full">
-                                                          <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                                                        </div>
-                                                    </div>                                                    
-                                                    <div class="mt-2 flex flex-col no-underline opacity-75 text-sm font-regular wt-body-font">
-                                                        <span class="text-xs font-semibold">{{blog.author}}<span class="text-pretty font-extralight"> | with AI support</span></span>
-                                                        <time>{{ blog.publish_date }}</time>
-                                                    </div>
-                                                </div>
-                                            </div>
+                <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    {% for blog in blogs %}
+                    <div class="group shadow-xl overflow-hidden transition-all hover:shadow-none hover:scale-105 duration-500 rounded-lg">
+                        <a href="{% url 'blog' slug=blog.slug %}" class="no-underline group flex flex-col h-full transition-all group-hover:brightness-110 rounded-lg">
+                            <div class="w-full overflow-hidden rounded-t-lg">
+                                <img src="{% static 'image/blog-images/'|add:blog.slug|add:'.webp' %}" alt="{{ blog.slug }}" class="w-full object-cover" style="aspect-ratio: 16/9;">
+                            </div>
+                            <div class="p-4 flex flex-col justify-between flex-grow">
+                                <div>
+                                    <h2 class="text-xl font-bold mb-2">{{ blog.title }}</h2>
+                                    <p class="text-gray-600 mb-4">{{ blog.subtitle }}</p>
+                                </div>
+                                <div class="flex items-center mt-4">
+                                    <div class="avatar mr-2">
+                                        <div class="w-10 rounded-full">
+                                            <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Author Avatar">
                                         </div>
                                     </div>
-                                </a>
+                                    <div class="text-sm opacity-75">
+                                        <span class="font-semibold">{{ blog.author }}</span>
+                                        <span class="text-pretty font-extralight"> | with AI support</span>
+                                        <div>{{ blog.publish_date }}</div>
+                                    </div>
+                                </div>
                             </div>
-                            {% endfor %}                          
-
-                        </div>
+                        </a>
                     </div>
+                    {% endfor %}
                 </div>
-                <!-- TODO: Blog Post Grid--> 
                 
             </div>
         </div>
