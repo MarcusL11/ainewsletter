@@ -2,6 +2,5 @@ from django.urls import path
 from . import views
 urlpatterns = [
     path('', views.home, name='home'),
-    path('blog/', views.blog, name='blog'), # Todo: add in slug
-
+    path("blog/<slug:slug>/", views.blog, name='blog'),
 ]

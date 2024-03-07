@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    h2 {
+      @apply text-2xl font-bold my-2 border-t-2 pt-2 border-secondary;
+    }
+    a {
+      @apply text-primary underline hover:no-underline hover:text-secondary hover:font-bold duration-500;
+    }
+    ul {
+        @apply list-disc;
+    }
+    h2 {
+      @apply text-xl;
+    }
+    /* ... */
+  }
