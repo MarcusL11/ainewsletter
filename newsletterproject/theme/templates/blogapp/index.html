@@ -22,12 +22,12 @@ Home
                         <a class="group relative flex w-full flex-col overflow-hidden rounded shadow-xl" href="{% url 'blog' slug=latest_blog.slug %}">
                             <div class="w-full overflow-hidden rounded-xs">
                                 <figure class="aspect-social relative">
-                                    <img src="{% static 'image/blog-images/'|add:latest_blog.slug|add:'.webp' %}" alt="{{ lateset_blog.slug }}" class="rounded-lg inset-0 min-w-full">
+                                    <img src="{% static 'image/blog-images/'|add:latest_blog.slug|add:'.webp' %}" alt="{{ lateset_blog.slug }}" class="rounded-lg inset-0 min-w-full" width="800" height="421">
                                 </figure>
                             </div>
                             <div class="absolute top-6 left-6">
                                 <div class="px-2 py-1 bg-white rounded-lg">
-                                    <spand class="font-semibold capitalize text-lg sm:text-4xl">Featured</span>
+                                    <spand class="font-semibold capitalize text-lg sm:text-4xl">Featured</spand>
                                 </div>
                             </div>
                             <div class="absolute bottom-0 flex h-full w-full flex-col justify-end space-y-1 bg-black bg-opacity-20 p-4 transition-all group-hover:bg-opacity-0">
@@ -39,14 +39,15 @@ Home
 
                     <!-- Side Blog Posts-->
                     <div class="mt-2 sm:mt-0 w-full md:w-1/3 md:pr-12">
-                        {% for blog in blogs %}
+                        <h3 class="text-primary my-0 border-t-0 text-xl font-bold mb-4">Recent Newsletter</h3>
+                        {% for blog in first_page_obj %}
                         <!-- Django Template Langauge Blog Stores-->
                         <div class="mb-4 border-b-2 border-primary hover:scale-105 pb-2">
                             <a class="flex no-underline" href="{% url 'blog' slug=blog.slug %}"> 
                                 <div class="flex items-center justify-between space-x-1">
                                     <div class="flex-col">
                                         <h2 class="border-t-0 text-sm lg:text-xl font-bold">{{ blog.title }}</h2>
-                                        <p class="text-xs lg:text-lg xl:text-xl font-regular">MORE: {{ blog.subtitle }}</p>
+                                        <p class="text-xs lg:text-sm font-regular">MORE: {{ blog.subtitle }}</p>
                                     </div>
                                     <!-- SVG Arrow-->
                                     <div class="h-fit rounded-full border-2 border-primary p-2 end-0" >
@@ -62,36 +63,12 @@ Home
                 </div>            
                                         
                 <!-- : Blog Post Grid-->
-                <div class="mt-6 sm:mt-20 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    {% for blog in blogs %}
-                    <div class="group shadow-xl overflow-hidden transition-all hover:shadow-none hover:scale-105  rounded-lg">
-                        <a href="{% url 'blog' slug=blog.slug %}" class="no-underline group flex flex-col h-full transition-all group-hover:brightness-110 rounded-lg">
-                            <div class="w-full overflow-hidden rounded-t-lg">
-                                <img src="{% static 'image/blog-images/'|add:blog.slug|add:'.webp' %}" alt="{{ blog.slug }}" class="w-full object-cover" style="aspect-ratio: 16/9;">
-                            </div>
-                            <div class="p-4 flex flex-col justify-between flex-grow">
-                                <div>
-                                    <h2 class="text-xl font-bold mb-2">{{ blog.title }}</h2>
-                                    <p class="text-gray-600 mb-4">{{ blog.subtitle }}</p>
-                                </div>
-                                <div class="flex items-center mt-4">
-                                    <div class="avatar mr-2">
-                                        <div class="w-10 rounded-full">
-                                            <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Author Avatar">
-                                        </div>
-                                    </div>
-                                    <div class="text-sm opacity-75">
-                                        <span class="font-semibold">{{ blog.author }}</span>
-                                        <span class="text-pretty font-extralight"> | with AI support</span>
-                                        <div>{{ blog.publish_date }}</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    {% endfor %}
-                </div>
-                
+                <section class="mt-10">
+                    <h3 class="text-primary my-0 border-t-0 text-xl font-bold mb-4">All Newsletters</h3>
+                </section>
+                <section id="blog-list">
+                    {% include "partials/_index_blog_list.html" %}
+                </section>
             </div>
         </div>
     </div>

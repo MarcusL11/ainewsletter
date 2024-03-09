@@ -7,7 +7,7 @@
       @apply text-2xl font-bold my-2 border-t-2 pt-2 border-secondary;
     }
     a {
-      @apply text-primary underline hover:no-underline hover:text-secondary hover:font-bold duration-500;
+      @apply text-primary underline hover:no-underline hover:text-secondary hover:font-bold;
     }
     ul {
         @apply list-disc;

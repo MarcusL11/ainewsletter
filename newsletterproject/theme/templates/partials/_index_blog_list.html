@@ -1,0 +1,47 @@
+{% load static %}
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+    {% for blog in second_page_obj %}
+    <div class="group shadow-xl overflow-hidden transition-all hover:shadow-none hover:scale-105  rounded-lg">
+        <a href="{% url 'blog' slug=blog.slug %}" class="no-underline group flex flex-col h-full transition-all group-hover:brightness-110 rounded-lg">
+            <div class="w-full overflow-hidden rounded-t-lg">
+                <img src="{% static 'image/blog-images/'|add:blog.slug|add:'.webp' %}" alt="{{ blog.slug }}" class="w-full object-cover" style="aspect-ratio: 16/9;" width="800" height="421">
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-grow">
+                <div>
+                    <h2 class="text-xl font-bold mb-2">{{ blog.title }}</h2>
+                    <p class="text-gray-600 mb-4">{{ blog.subtitle }}</p>
+                </div>
+                <div class="flex items-center mt-4">
+                    <div class="avatar mr-2">
+                        <div class="w-10 rounded-full">
+                            <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Author Avatar">
+                        </div>
+                    </div>
+                    <div class="text-sm opacity-75">
+                        <span class="font-semibold">{{ blog.author }}</span>
+                        <span class="text-pretty font-extralight"> | with AI support</span>
+                        <div>{{ blog.publish_date }}</div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    {% endfor %}                    
+</div>
+<nav class="mt-10 flex justify-center">
+    <div class="join">
+        {% if second_page_obj.has_previous %}
+            <button hx-get="?page={{ second_page_obj.previous_page_number }}" hx-target="#blog-list" hx-swap="innerHTML" class="join-item btn">«</button>
+        {% else %}
+            <button class="join-item btn" disabled>«</button>
+        {% endif %}
+        
+        <button class="join-item btn">Page {{ second_page_obj.number }} of {{ second_page_obj.paginator.num_pages }}</button>
+        
+        {% if second_page_obj.has_next %}
+            <button hx-get="?page={{ second_page_obj.next_page_number }}" hx-target="#blog-list" hx-swap="innerHTML" class="join-item btn">»</button>
+        {% else %}                            
+            <button class="join-item btn" disabled>»</button>
+        {% endif %}
+    </div>
+</nav>
