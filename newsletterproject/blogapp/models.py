@@ -2,7 +2,6 @@ from django.db import models
 from django.utils.text import slugify
 
 
-
 class Tag(models.Model):
     name = models.CharField(max_length=50, blank=True, null=True)    
     class Meta:

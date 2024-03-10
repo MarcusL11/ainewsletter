@@ -1,4 +1,9 @@
+import os
 from pathlib import Path
+
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -16,11 +21,14 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    
     "blogapp.apps.BlogappConfig",  # app
+    "authapp.apps.AuthappConfig",  # app
+    
     "django_extensions",  # django-extensions package
     "tailwind",  # tailwind package
     "theme",  # tailwind package
-    "widget_tweaks",
+    "widget_tweaks", # widget-tweaks package
 ]
 
 TAILWIND_APP_NAME = "theme"
@@ -110,3 +118,12 @@ STATICFILES_DIRS = [
 ]
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+AUTH_USER_MODEL = "authapp.User"
+
+EMAIL_BACKEND=os.environ['EMAIL_BACKEND']
+EMAIL_HOST=os.environ['EMAIL_HOST']
+EMAIL_PORT=os.environ['EMAIL_PORT']
+EMAIL_USE_TLS=os.environ['EMAIL_USE_TLS']
+EMAIL_HOST_USER=os.environ['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD=os.environ['EMAIL_HOST_PASSWORD']
