@@ -6,10 +6,12 @@
     </div>
     <!-- sm lg xl screens -->
     <div class="flex-none">
-      <ul class="menu menu-horizontal px-1 items-center">
-        <button class="btn input input-bordered md:w-auto text-primary" hx-get="{% url 'search-trigger' %}" hx-swap="outerHTML">
-            Search Newsletter
-        </button>            
+      <ul class="menu menu-horizontal px-1 items-center gap-2">
+
+        {% load unicorn %}
+        {% csrf_token %}
+        {% unicorn 'search_blog' %}
+
         {% if not request.user.is_anonymous and request.user.has_verified_email %}
         <li>
           <details>
@@ -25,7 +27,8 @@
         {% else %}
         <li><a href="{% url 'sign_in'%}" class="no-underline">Login</a></li>
         {% endif %}
-        <!-- Theme Controller Icon-->
+
+        <!-- TODO: CONVERT TO COMPONENT -->      
         <li>
             <label class="swap swap-rotate btn btn-ghost hover:scale-105 hover:bg-transparent">
                 <input type="checkbox" class="theme-controller" value="forest" id="themeSelector" />
@@ -46,6 +49,8 @@
                 </svg>
             </label>       
         </li>
+        <!-- TODO: CONVERT TO COMPONENT -->
+
       </ul>
     </div>
   </div>

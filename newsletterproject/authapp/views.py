@@ -1,12 +1,14 @@
 from django.contrib.auth import login
 from django.contrib.auth.tokens import default_token_generator
+from django.core.exceptions import ValidationError
+from django.core.validators import validate_email
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
 from django.utils.http import urlsafe_base64_decode
 from django.views import View
 
 from .forms import CreateUserForm
-from .models import User, Subscription
+from .models import Subscription, User
 from .services import decode_uid, get_user_by_uid, send_sign_in_email
 
 
@@ -91,4 +93,27 @@ def subscribe(request: HttpRequest) -> HttpResponse:
         message = (
             "You have successfully subscribed to our newsletter."
         )
+        return HttpResponse(message)
+    
+def subscribe_only(request: HttpRequest) -> HttpResponse:
+    if request.method == 'POST':
+        email = request.POST.get('email', '')
+        
+        try:
+            validate_email(email)
+        except ValidationError:
+            message = "Invalid email address."
+            return HttpResponse(message)
+
+        user, created = User.objects.get_or_create(
+            email=email,
+            defaults={'username': email, 'password': email}
+        )        
+        
+        subscriber, subscriber_created = Subscription.objects.get_or_create(email=user)
+        subscriber.status = True
+        subscriber.save()
+        
+        message = "You have subscribed to our newsletter."
+        
         return HttpResponse(message)

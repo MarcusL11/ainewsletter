@@ -1,4 +1,5 @@
 {% load static tailwind_tags %}
+{% load unicorn %}
 <!DOCTYPE html>
 <html class="duration-500" lang="en">
 	<head>
@@ -8,8 +9,9 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-    	<script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+    	<script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>	
 		{% tailwind_css %}
+		{% unicorn_scripts %}
 	</head>
 
 	<header>
@@ -19,7 +21,8 @@
 	</header>
 	
 	<body>
-		<div class="container ">
+		<div class="container">
+			{% csrf_token %}
 			{% block body %}
 			{% endblock body %}
 		</div>
@@ -41,7 +44,7 @@
 			  localStorage.setItem('selectedTheme', selectedTheme);
 			}
 		</script>
-		<!-- Theme Switch JS -->								
+		<!-- Theme Switch JS -->		
 	</body>
 	<footer>		
 		<div class="container ">

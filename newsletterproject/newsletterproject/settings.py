@@ -28,7 +28,8 @@ INSTALLED_APPS = [
     "django_extensions",  # django-extensions package
     "tailwind",  # tailwind package
     "theme",  # tailwind package
-    "widget_tweaks", # widget-tweaks package
+    "django_unicorn",  # required for Django to register urls and templatetags
+    
 ]
 
 TAILWIND_APP_NAME = "theme"
@@ -54,6 +55,8 @@ TEMPLATES = [
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
             BASE_DIR / "theme/templates",
+            BASE_DIR / "authapp/templates",
+            BASE_DIR / "blogapp/templates",
         ],
         "APP_DIRS": True,
         "OPTIONS": {

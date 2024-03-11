@@ -1,0 +1,69 @@
+<div>
+{% comment %} <div unicorn:keydown.window="handle_keydown_event"> {% endcomment %}
+    <!-- Button to Initiate search form -->        
+    <button unicorn:click="toggle_form" class="btn input input-bordered text-primary">
+        <?xml version="1.0" encoding="iso-8859-1"?>
+        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+        <svg fill="#000000" height="18px" width="18px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+             viewBox="0 0 488.4 488.4" xml:space="preserve">
+            <g>
+                <g>
+                    <path d="M0,203.25c0,112.1,91.2,203.2,203.2,203.2c51.6,0,98.8-19.4,134.7-51.2l129.5,129.5c2.4,2.4,5.5,3.6,8.7,3.6
+                        s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-129.6-129.5c31.8-35.9,51.2-83,51.2-134.7c0-112.1-91.2-203.2-203.2-203.2
+                        S0,91.15,0,203.25z M381.9,203.25c0,98.5-80.2,178.7-178.7,178.7s-178.7-80.2-178.7-178.7s80.2-178.7,178.7-178.7
+                        S381.9,104.65,381.9,203.25z"/>
+                </g>
+            </g>
+        </svg>        
+        Search for Newsletter...
+    </button>
+    {% if show_form %}
+        <!-- Overlay with a click to toggle form off -->        
+        <div unicorn:click="toggle_form" class="z-50 fixed top-0 left-0 w-full h-full bg-gray-700 bg-opacity-75">
+            <div class="flex justify-center">
+                <div class="mt-10 mb-6">
+                    <input type="text" placeholder="Search post..." 
+                            class="input input-bordered" 
+                            unicorn:model="search_content"
+                            pattern="[A-Za-z0-9 ]*" 
+                            title="Only alphanumeric characters and space are allowed.">
+                    <button class="btn btn-error">Close</button>
+                </div>
+            </div>
+            <div class="duration-500 flex justify-center">
+                <!-- Display search results -->
+                <div id="search-wrapper" data-action="click->outsideClick" class="flex flex-col">
+                    {% for post in results %}
+                    <div class="bg-base-100 hover:sclae-105 rounded-lg mb-2 hover:scale-105 duration-500">
+                        <a href="{% url 'blog' slug=post.slug %}" class="no-underline p-2 flex flex-col">
+                            <span class="flex text-xl font-bold">{{ post.title|safe }}</span>
+                            <span class="flex text-sm">{{ post.publish_date }}</span>        
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+<script>
+    document.addEventListener("keydown", function(event) {
+        if ((event.ctrlKey || event.metaKey) && event.key === "k") {
+            event.preventDefault();  // Prevent the default action to avoid conflicts
+    
+            // Target the component by unicorn:name attribute
+            const unicornElements = document.querySelectorAll('[unicorn\\:name="search_blog"]');
+    
+            // There might be multiple elements, but we expect only one search component
+            if (unicornElements.length > 0) {
+                const unicornElement = unicornElements[0];
+                const searchComponent = unicornElement.__unicorn;
+    
+                if (searchComponent) {
+                    searchComponent.call('toggle_form');
+                }
+            }
+        }
+    });
+    </script>
+    

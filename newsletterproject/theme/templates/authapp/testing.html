@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load unicorn %}
+{% block title %} Testing {% endblock title %}
+{% block extra_scripts %}
+{% unicorn_scripts %}
+{% endblock extra_scripts %}
+{% block body %}
+{% csrf_token %}
+<main>
+
+{% unicorn 'movielist' %}
+</main>
+{% endblock body %}

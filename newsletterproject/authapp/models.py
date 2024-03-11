@@ -11,4 +11,5 @@ class Subscription(models.Model):
     tier = models.CharField(max_length=100, default='Free')
 
     def __str__ (self):
-        return self.email.username
+        return self.email
+    

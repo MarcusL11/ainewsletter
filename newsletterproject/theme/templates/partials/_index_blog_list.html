@@ -1,4 +1,5 @@
-{% load static %}
+{% comment %} {% load static %}
+
 <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
     {% for blog in second_page_obj %}
     <div class="group shadow-xl overflow-hidden transition-all hover:shadow-none hover:scale-105  rounded-lg">
@@ -44,4 +45,4 @@
             <button class="join-item btn" disabled>»</button>
         {% endif %}
     </div>
-</nav>
+</nav> {% endcomment %}
