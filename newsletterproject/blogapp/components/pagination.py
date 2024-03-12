@@ -19,9 +19,7 @@ class PaginationView(UnicornView):
         paginator = Paginator(all_blogs, 10)  # 1 item per page as intended
         
         page_obj = paginator.get_page(self.page_number)
-        self.blogs = page_obj.object_list  # Ensure this line accurately assigns the paginated set
-        
-        print(f"Updating blogs for page {self.page_number}: {self.blogs}")  # Debugging
+        self.blogs = page_obj.object_list  # Ensure this line accurately assigns the paginated set    
 
         self.has_next = page_obj.has_next()
         self.has_previous = page_obj.has_previous()

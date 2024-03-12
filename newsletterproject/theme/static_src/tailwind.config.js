@@ -53,8 +53,8 @@ module.exports = {
     daisyui: {
         themes: [
             {
-                autumn: {
-                    ...require("daisyui/src/theming/themes")["autumn"],
+                lemonade: {
+                    ...require("daisyui/src/theming/themes")["lemonade"],
                     ".theme-controller": {
                         position: "absolute",
                         opacity: 0,
@@ -67,8 +67,8 @@ module.exports = {
                         alignItems: "center",
                     },
                 },
-                forest: {
-                    ...require("daisyui/src/theming/themes")["forest"],
+                dim: {
+                    ...require("daisyui/src/theming/themes")["dim"],
                     ".theme-controller": {
                         position: "absolute",
                         opacity: 0,

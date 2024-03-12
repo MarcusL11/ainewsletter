@@ -1,7 +1,7 @@
 {% load static tailwind_tags %}
 {% load unicorn %}
 <!DOCTYPE html>
-<html class="duration-500" lang="en">
+<html  data-theme="lemonade" class="duration-500" lang="en">
 	<head>
 		<meta name="description" content="Your meta description here">
 		<meta name="keywords" content="your, meta, keywords, here">
@@ -21,30 +21,13 @@
 	</header>
 	
 	<body>
+		<script src="{% static 'js/themeSelector.js' %}"></script>
+
 		<div class="container">
 			{% csrf_token %}
 			{% block body %}
 			{% endblock body %}
 		</div>
-		
-		<!-- Theme Switch JS -->										
-		<script>
-			const storedTheme = localStorage.getItem('selectedTheme');
-			if (storedTheme) {
-			  document.documentElement.setAttribute('data-theme', storedTheme);
-			  document.getElementById('themeSelector').checked = storedTheme !== 'autumn';
-			}
-			
-			const themeSelector = document.getElementById('themeSelector');
-			themeSelector.addEventListener('change', handleThemeChange);
-		
-			function handleThemeChange() {
-			  const selectedTheme = themeSelector.checked ? themeSelector.value : 'autumn';
-			  document.documentElement.setAttribute('data-theme', selectedTheme);
-			  localStorage.setItem('selectedTheme', selectedTheme);
-			}
-		</script>
-		<!-- Theme Switch JS -->		
 	</body>
 	<footer>		
 		<div class="container ">

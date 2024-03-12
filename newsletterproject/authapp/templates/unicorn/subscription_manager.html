@@ -1,0 +1,56 @@
+<div>
+    <div class="mt-20 card bg-base-100 shadow-xl border-2 border-primary p-8 xl:px-60">
+        <div class="flex justify-between">
+            <p>Email:</p>
+            <p>{{ user.email }}</p>
+        </div>
+        
+        <div class="flex flex-col w-full">
+            <div class="divider"></div>                    
+        </div>
+        
+        <div class="flex justify-between">
+            <p>Subscription Status:</p>
+            {% if subscription_status %}
+            <div class="flex flex-col justify-center items-center">
+                <p>✅ Active</p>
+                <p class="text-xs font-light">{{ subscription_tier }} Tier</p>
+            </div>
+            {% else %}
+            <div class="flex gap-2 items-center">
+                <p> Inactive </p>                     
+            </div>                    
+            {% endif %}
+        </div>                    
+    </div>       
+        
+    <section>
+        <h2 class="border-t-0 mt-10 text-2xl font-bold">Update Subscription</h2>
+        <p>You may manage your subscription with the actions below.</p>
+        <div class="rounded-xl mt-6">
+            {% if subscription_status %}            
+            <button id="unsubscribe-btn" unicorn:click="unsubscribe" class="hover:scale-105 btn btn-primary lg:btn-lg">Unsubscribe</button>
+            {% else %}
+            <button id="subscribe-btn" unicorn:click="subscribe" class="hover:scale-105 btn btn-primary lg:btn-lg">Subscribe</button>
+            {% endif %}
+            <!-- Display messages -->
+            {% if message %}
+            <div id="status-toast" class="toast animate-bounce">
+                <div class="alert bg-primary">
+                    <span class="text-white">{{ message }}</span>
+                </div>
+            </div>            
+            {% endif %}
+        </div>       
+    </section>
+</div>
+<script>
+    function hideAlertAfterDelay() {
+        setTimeout(() => {
+            const alertElement = document.getElementById('status-toast');
+            if (alertElement) {
+                alertElement.classList.add('hidden');
+            }
+        }, 3000);
+    }
+</script>

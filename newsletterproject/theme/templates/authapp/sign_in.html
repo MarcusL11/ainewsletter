@@ -9,7 +9,6 @@
             <div class="card-body">                
                 <h1 class="text-2xl font-bold">Email Verification Login</h1>
                 <div class="mt-6 mb-2"> 
-                    <!-- TODO: CONVERT TO COMPONENT -->
                     <form method="post" hx-post="/sign-in/" hx-target="#result">
                         {% csrf_token %}
                         <div class="flex my-4 justify-center">
@@ -23,7 +22,6 @@
                         </div>
                         <div id="result"></div>
                     </form>
-                    <!-- TODO: CONVERT TO COMPONENT -->
                 </div>
             </div>
         </div>
@@ -47,3 +45,4 @@
 </script>
 
 {% endblock body %}
+

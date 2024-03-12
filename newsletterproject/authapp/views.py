@@ -29,7 +29,7 @@ def verify_email(request: HttpRequest, uidb64: str, token: str) -> HttpResponse:
 
     print("Email verification failed")    
     return redirect('sign_in')
-
+    
 
 class SendSignInEmail(View):
     def get(self, request: HttpRequest) -> HttpResponse:
@@ -48,7 +48,6 @@ class SendSignInEmail(View):
             email=data['email'],
             defaults={'username': data['email'], 'password': data['email']}
         )
-
         return self._send_verification_and_respond(user)
 
     @staticmethod

@@ -7,8 +7,7 @@ Dashboard
 <main class="mb-10 h-screen">
 
     <section class="flex justify-center">
-        <div class="w-full sm:px-0 sm:w-3/4">
-            
+        <div class="w-full sm:px-0 sm:w-3/4">            
             <!-- Breadcrumbs -->
             <div class="text-sm breadcrumbs">
                 <ul>
@@ -17,62 +16,50 @@ Dashboard
                 </ul>
             </div>
             <!-- Breadcrumbs -->
-            
-            <div class="mt-20 card bg-base-100 shadow-xl border-2 border-primary p-8 xl:px-60">
-                <div class="flex justify-between">
-                    <p>Email:</p>
-                    <p>{{ user.email }}</p>
-                </div>
-                
-                <div class="flex flex-col w-full">
-                    <div class="divider"></div>                    
-                </div>
-                
-                <div class="flex justify-between">
-                    <p>Subscription Status:</p>
-                    {% if user.subscription.status %}
-                    <div class="flex flex-col justify-center items-center">
-                        <p>✅ Active</p>
-                        <p class="text-xs font-light">{{ user.subscription.tier }} Tier</p>
-                    </div>
-                    {% else %}
-                    <div class="flex gap-2">
-                        <p> Inactive </p>                        
-                        <form method="post" hx-post="/subscribe/" hx-target="#success-message">
-                            {% csrf_token %}
-                            <div class="flex flex-col mt-4">
-                                <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
-                            </div>
-                        </form>                        
-                    </div>                    
-                    {% endif %}
-                </div>                    
-            </div>
-            <div id="success-message" class="mt-4"></div>
-
-            {% if user.subscription.status %}
-
-            <section>
-                <h2 class="border-t-0 mt-10 text-2xl font-bold">Update Subscription</h2>
-                <p>You may manage your subscription with the actions below.</p>
-                <div class="border border-gray-400 rounded-xl py-8 px-4 mt-6">
-                    <div role="alert" class="alert alert-warning">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
-                        <span>Please Note: Unsubscribing: By unsubscribing, you will no longer receive newsletters.</span>
-                    </div>
-                    <form method="post" hx-post="/unsubscribe/" hx-target="#result">
-                        {% csrf_token %}
-                        <div class="flex flex-col mt-4">
-                            <button type="submit" class="hover:scale-105 btn btn-primary  lg:btn-lg">Unsubscribe</button>
-                        </div>
-                        <div id="result" class="mt-4"></div>
-                    </form>
-                </div>       
-            </section>
-            {% else %}
-
-            {% endif %}
+            {% load unicorn %}
+            {% csrf_token %}
+            {% unicorn 'subscription_manager' %}                
         </div>
     </section>
 </main>
 {% endblock body %}
+
+
+
+
+<!-- Component unsubscribe and subscribe 
+<div class="flex justify-between">
+    <p>Subscription Status:</p>
+    {% if user.subscription.status %}
+    <div class="flex flex-col justify-center items-center">
+        <p>✅ Active</p>
+        <p class="text-xs font-light">{{ user.subscription.tier }} Tier</p>
+    </div>
+    {% else %}
+    <div class="flex gap-2 items-center">
+        <p> Inactive </p>                     
+    </div>                    
+    {% endif %}
+
+<section>
+    <h2 class="border-t-0 mt-10 text-2xl font-bold">Update Subscription</h2>
+    <p>You may manage your subscription with the actions below.</p>
+    <div class="border border-gray-400 rounded-xl py-8 px-4 mt-6">
+        <div role="alert" class="alert alert-warning">
+            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+            <span> By unsubscribing, you will no longer receive newsletters.</span>
+        </div>
+        <form method="post" hx-post="/unsubscribe/" hx-target="#result">
+            {% csrf_token %}
+            <div class="flex flex-col mt-4">
+
+                <button type="submit" class="hover:scale-105 btn btn-primary  lg:btn-lg">Unsubscribe</button>
+
+            </div>
+
+            <div class="mt-4"></div>
+
+        </form>
+    </div>       
+</section>
+Component unsubscribe and subscribe -->

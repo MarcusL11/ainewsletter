@@ -1,5 +1,4 @@
 <div>
-{% comment %} <div unicorn:keydown.window="handle_keydown_event"> {% endcomment %}
     <!-- Button to Initiate search form -->        
     <button unicorn:click="toggle_form" class="btn input input-bordered text-primary">
         <?xml version="1.0" encoding="iso-8859-1"?>
@@ -46,24 +45,3 @@
         </div>
     {% endif %}
 </div>
-<script>
-    document.addEventListener("keydown", function(event) {
-        if ((event.ctrlKey || event.metaKey) && event.key === "k") {
-            event.preventDefault();  // Prevent the default action to avoid conflicts
-    
-            // Target the component by unicorn:name attribute
-            const unicornElements = document.querySelectorAll('[unicorn\\:name="search_blog"]');
-    
-            // There might be multiple elements, but we expect only one search component
-            if (unicornElements.length > 0) {
-                const unicornElement = unicornElements[0];
-                const searchComponent = unicornElement.__unicorn;
-    
-                if (searchComponent) {
-                    searchComponent.call('toggle_form');
-                }
-            }
-        }
-    });
-    </script>
-    

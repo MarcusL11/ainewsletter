@@ -60,7 +60,3 @@ class SearchBlogView(UnicornView):
         else:
             self.results = []
             
-    
-    # def handle_keydown_event(self, event):
-    #     if event.get("metaKey") or event.get("ctrlKey") and event.get("key") == "k":
-    #         self.toggle_form()

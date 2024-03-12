@@ -703,17 +703,17 @@ html {
 
 :root {
   color-scheme: light;
-  --b2: 0.891077 0 0;
-  --b3: 0.824006 0 0;
-  --bc: 0.191629 0 0;
-  --pc: 0.881446 0.032232 17.530175;
-  --sc: 0.123353 0.033821 23.865865;
-  --ac: 0.146851 0.018999 60.729616;
-  --nc: 0.908734 0.007475 51.902819;
-  --inc: 0.138449 0.019596 207.284192;
-  --suc: 0.12199 0.016032 174.616213;
-  --wac: 0.140163 0.032982 56.844303;
-  --erc: 0.90614 0.0482 24.16;
+  --b2: 0.918003 0.0186 123.72;
+  --b3: 0.848906 0.0172 123.72;
+  --bc: 0.19742 0.004 123.72;
+  --pc: 0.11784 0.0398 134.6;
+  --sc: 0.1555 0.0392 111.09;
+  --ac: 0.17078 0.0402 100.73;
+  --nc: 0.86196 0.015 108.6;
+  --inc: 0.17238 0.0094 224.14;
+  --suc: 0.17238 0.0094 157.85;
+  --wac: 0.17238 0.0094 102.15;
+  --erc: 0.17238 0.0094 25.85;
   --rounded-box: 1rem;
   --rounded-btn: 0.5rem;
   --rounded-badge: 1.9rem;
@@ -723,15 +723,15 @@ html {
   --border-btn: 1px;
   --tab-border: 1px;
   --tab-radius: 0.5rem;
-  --p: 0.407232 0.16116 17.530175;
-  --s: 0.616763 0.169105 23.865865;
-  --a: 0.734253 0.094994 60.729616;
-  --n: 0.543672 0.037374 51.902819;
-  --b1: 0.958147 0 0;
-  --in: 0.692245 0.097979 207.284192;
-  --su: 0.609951 0.080159 174.616213;
-  --wa: 0.700817 0.164909 56.844303;
-  --er: 0.5307 0.241 24.16;
+  --p: 0.5892 0.199 134.6;
+  --s: 0.7775 0.196 111.09;
+  --a: 0.8539 0.201 100.73;
+  --n: 0.3098 0.075 108.6;
+  --b1: 0.9871 0.02 123.72;
+  --in: 0.8619 0.047 224.14;
+  --su: 0.8619 0.047 157.85;
+  --wa: 0.8619 0.047 102.15;
+  --er: 0.8619 0.047 25.85;
 }
 
 :root .theme-controller {
@@ -742,19 +742,19 @@ html {
   overflow: hidden;
 }
 
-[data-theme=autumn] {
+[data-theme=lemonade] {
   color-scheme: light;
-  --b2: 0.891077 0 0;
-  --b3: 0.824006 0 0;
-  --bc: 0.191629 0 0;
-  --pc: 0.881446 0.032232 17.530175;
-  --sc: 0.123353 0.033821 23.865865;
-  --ac: 0.146851 0.018999 60.729616;
-  --nc: 0.908734 0.007475 51.902819;
-  --inc: 0.138449 0.019596 207.284192;
-  --suc: 0.12199 0.016032 174.616213;
-  --wac: 0.140163 0.032982 56.844303;
-  --erc: 0.90614 0.0482 24.16;
+  --b2: 0.918003 0.0186 123.72;
+  --b3: 0.848906 0.0172 123.72;
+  --bc: 0.19742 0.004 123.72;
+  --pc: 0.11784 0.0398 134.6;
+  --sc: 0.1555 0.0392 111.09;
+  --ac: 0.17078 0.0402 100.73;
+  --nc: 0.86196 0.015 108.6;
+  --inc: 0.17238 0.0094 224.14;
+  --suc: 0.17238 0.0094 157.85;
+  --wac: 0.17238 0.0094 102.15;
+  --erc: 0.17238 0.0094 25.85;
   --rounded-box: 1rem;
   --rounded-btn: 0.5rem;
   --rounded-badge: 1.9rem;
@@ -764,18 +764,18 @@ html {
   --border-btn: 1px;
   --tab-border: 1px;
   --tab-radius: 0.5rem;
-  --p: 0.407232 0.16116 17.530175;
-  --s: 0.616763 0.169105 23.865865;
-  --a: 0.734253 0.094994 60.729616;
-  --n: 0.543672 0.037374 51.902819;
-  --b1: 0.958147 0 0;
-  --in: 0.692245 0.097979 207.284192;
-  --su: 0.609951 0.080159 174.616213;
-  --wa: 0.700817 0.164909 56.844303;
-  --er: 0.5307 0.241 24.16;
+  --p: 0.5892 0.199 134.6;
+  --s: 0.7775 0.196 111.09;
+  --a: 0.8539 0.201 100.73;
+  --n: 0.3098 0.075 108.6;
+  --b1: 0.9871 0.02 123.72;
+  --in: 0.8619 0.047 224.14;
+  --su: 0.8619 0.047 157.85;
+  --wa: 0.8619 0.047 102.15;
+  --er: 0.8619 0.047 25.85;
 }
 
-[data-theme=autumn] .theme-controller {
+[data-theme=lemonade] .theme-controller {
   position: absolute;
   opacity: 0;
   width: 1px;
@@ -783,19 +783,19 @@ html {
   overflow: hidden;
 }
 
-:root:has(input.theme-controller[value=autumn]:checked) {
+:root:has(input.theme-controller[value=lemonade]:checked) {
   color-scheme: light;
-  --b2: 0.891077 0 0;
-  --b3: 0.824006 0 0;
-  --bc: 0.191629 0 0;
-  --pc: 0.881446 0.032232 17.530175;
-  --sc: 0.123353 0.033821 23.865865;
-  --ac: 0.146851 0.018999 60.729616;
-  --nc: 0.908734 0.007475 51.902819;
-  --inc: 0.138449 0.019596 207.284192;
-  --suc: 0.12199 0.016032 174.616213;
-  --wac: 0.140163 0.032982 56.844303;
-  --erc: 0.90614 0.0482 24.16;
+  --b2: 0.918003 0.0186 123.72;
+  --b3: 0.848906 0.0172 123.72;
+  --bc: 0.19742 0.004 123.72;
+  --pc: 0.11784 0.0398 134.6;
+  --sc: 0.1555 0.0392 111.09;
+  --ac: 0.17078 0.0402 100.73;
+  --nc: 0.86196 0.015 108.6;
+  --inc: 0.17238 0.0094 224.14;
+  --suc: 0.17238 0.0094 157.85;
+  --wac: 0.17238 0.0094 102.15;
+  --erc: 0.17238 0.0094 25.85;
   --rounded-box: 1rem;
   --rounded-btn: 0.5rem;
   --rounded-badge: 1.9rem;
@@ -805,18 +805,18 @@ html {
   --border-btn: 1px;
   --tab-border: 1px;
   --tab-radius: 0.5rem;
-  --p: 0.407232 0.16116 17.530175;
-  --s: 0.616763 0.169105 23.865865;
-  --a: 0.734253 0.094994 60.729616;
-  --n: 0.543672 0.037374 51.902819;
-  --b1: 0.958147 0 0;
-  --in: 0.692245 0.097979 207.284192;
-  --su: 0.609951 0.080159 174.616213;
-  --wa: 0.700817 0.164909 56.844303;
-  --er: 0.5307 0.241 24.16;
+  --p: 0.5892 0.199 134.6;
+  --s: 0.7775 0.196 111.09;
+  --a: 0.8539 0.201 100.73;
+  --n: 0.3098 0.075 108.6;
+  --b1: 0.9871 0.02 123.72;
+  --in: 0.8619 0.047 224.14;
+  --su: 0.8619 0.047 157.85;
+  --wa: 0.8619 0.047 102.15;
+  --er: 0.8619 0.047 25.85;
 }
 
-:root:has(input.theme-controller[value=autumn]:checked) .theme-controller {
+:root:has(input.theme-controller[value=lemonade]:checked) .theme-controller {
   position: absolute;
   opacity: 0;
   width: 1px;
@@ -824,28 +824,22 @@ html {
   overflow: hidden;
 }
 
-:root:has(input.theme-controller[value=autumn]:checked) .dark-mode-switch {
+:root:has(input.theme-controller[value=lemonade]:checked) .dark-mode-switch {
   display: flex;
   align-items: center;
 }
 
-[data-theme=forest] {
+[data-theme=dim] {
   color-scheme: dark;
-  --b2: 0.17522 0.007709 17.911578;
-  --b3: 0.162032 0.007129 17.911578;
-  --in: 0.7206 0.191 231.6;
-  --su: 64.8% 0.150 160;
-  --wa: 0.8471 0.199 83.87;
-  --er: 0.7176 0.221 22.18;
-  --bc: 0.837682 0.001658 17.911578;
-  --sc: 0.139553 0.027077 168.327128;
-  --ac: 0.141257 0.02389 185.713193;
-  --nc: 0.861397 0.007806 171.364646;
-  --inc: 0 0 0;
-  --suc: 0 0 0;
-  --wac: 0 0 0;
-  --erc: 0 0 0;
+  --pc: 0.172267 0.028331 139.549991;
+  --sc: 0.146752 0.033181 35.353059;
+  --ac: 0.148459 0.026728 311.37924;
+  --inc: 0.172157 0.028409 206.182959;
+  --suc: 0.172343 0.028437 166.534048;
+  --wac: 0.172327 0.028447 94.818679;
+  --erc: 0.164838 0.019914 33.756357;
   --rounded-box: 1rem;
+  --rounded-btn: 0.5rem;
   --rounded-badge: 1.9rem;
   --animation-btn: 0.25s;
   --animation-input: .2s;
@@ -853,16 +847,22 @@ html {
   --border-btn: 1px;
   --tab-border: 1px;
   --tab-radius: 0.5rem;
-  --p: 0.686283 0.185567 148.958922;
-  --pc: 0 0 0;
-  --s: 0.697764 0.135385 168.327128;
-  --a: 0.706285 0.119451 185.713193;
-  --n: 0.306985 0.039032 171.364646;
-  --b1: 0.188409 0.00829 17.911578;
-  --rounded-btn: 1.9rem;
+  --p: 0.861335 0.141656 139.549991;
+  --s: 0.733759 0.165904 35.353059;
+  --a: 0.742296 0.133641 311.37924;
+  --n: 0.247311 0.020483 264.094728;
+  --nc: 0.829011 0.031335 222.959324;
+  --b1: 0.308577 0.023243 264.149498;
+  --b2: 0.280368 0.01983 264.182074;
+  --b3: 0.263469 0.018403 262.177739;
+  --bc: 0.829011 0.031335 222.959324;
+  --in: 0.860785 0.142046 206.182959;
+  --su: 0.861717 0.142187 166.534048;
+  --wa: 0.861634 0.142236 94.818679;
+  --er: 0.824189 0.09957 33.756357;
 }
 
-[data-theme=forest] .theme-controller {
+[data-theme=dim] .theme-controller {
   position: absolute;
   opacity: 0;
   width: 1px;
@@ -870,23 +870,17 @@ html {
   overflow: hidden;
 }
 
-:root:has(input.theme-controller[value=forest]:checked) {
+:root:has(input.theme-controller[value=dim]:checked) {
   color-scheme: dark;
-  --b2: 0.17522 0.007709 17.911578;
-  --b3: 0.162032 0.007129 17.911578;
-  --in: 0.7206 0.191 231.6;
-  --su: 64.8% 0.150 160;
-  --wa: 0.8471 0.199 83.87;
-  --er: 0.7176 0.221 22.18;
-  --bc: 0.837682 0.001658 17.911578;
-  --sc: 0.139553 0.027077 168.327128;
-  --ac: 0.141257 0.02389 185.713193;
-  --nc: 0.861397 0.007806 171.364646;
-  --inc: 0 0 0;
-  --suc: 0 0 0;
-  --wac: 0 0 0;
-  --erc: 0 0 0;
+  --pc: 0.172267 0.028331 139.549991;
+  --sc: 0.146752 0.033181 35.353059;
+  --ac: 0.148459 0.026728 311.37924;
+  --inc: 0.172157 0.028409 206.182959;
+  --suc: 0.172343 0.028437 166.534048;
+  --wac: 0.172327 0.028447 94.818679;
+  --erc: 0.164838 0.019914 33.756357;
   --rounded-box: 1rem;
+  --rounded-btn: 0.5rem;
   --rounded-badge: 1.9rem;
   --animation-btn: 0.25s;
   --animation-input: .2s;
@@ -894,16 +888,22 @@ html {
   --border-btn: 1px;
   --tab-border: 1px;
   --tab-radius: 0.5rem;
-  --p: 0.686283 0.185567 148.958922;
-  --pc: 0 0 0;
-  --s: 0.697764 0.135385 168.327128;
-  --a: 0.706285 0.119451 185.713193;
-  --n: 0.306985 0.039032 171.364646;
-  --b1: 0.188409 0.00829 17.911578;
-  --rounded-btn: 1.9rem;
+  --p: 0.861335 0.141656 139.549991;
+  --s: 0.733759 0.165904 35.353059;
+  --a: 0.742296 0.133641 311.37924;
+  --n: 0.247311 0.020483 264.094728;
+  --nc: 0.829011 0.031335 222.959324;
+  --b1: 0.308577 0.023243 264.149498;
+  --b2: 0.280368 0.01983 264.182074;
+  --b3: 0.263469 0.018403 262.177739;
+  --bc: 0.829011 0.031335 222.959324;
+  --in: 0.860785 0.142046 206.182959;
+  --su: 0.861717 0.142187 166.534048;
+  --wa: 0.861634 0.142236 94.818679;
+  --er: 0.824189 0.09957 33.756357;
 }
 
-:root:has(input.theme-controller[value=forest]:checked) .theme-controller {
+:root:has(input.theme-controller[value=dim]:checked) .theme-controller {
   position: absolute;
   opacity: 0;
   width: 1px;
@@ -911,7 +911,7 @@ html {
   overflow: hidden;
 }
 
-:root:has(input.theme-controller[value=forest]:checked) .dark-mode-switch {
+:root:has(input.theme-controller[value=dim]:checked) .dark-mode-switch {
   display: flex;
   align-items: center;
 }
@@ -1417,6 +1417,18 @@ h2 {
     }
   }
 
+  .btn-outline.btn-error:hover {
+    --tw-text-opacity: 1;
+    color: var(--fallback-erc,oklch(var(--erc)/var(--tw-text-opacity)));
+  }
+
+  @supports (color: color-mix(in oklab, black, black)) {
+    .btn-outline.btn-error:hover {
+      background-color: color-mix(in oklab, var(--fallback-er,oklch(var(--er)/1)) 90%, black);
+      border-color: color-mix(in oklab, var(--fallback-er,oklch(var(--er)/1)) 90%, black);
+    }
+  }
+
   .btn-disabled:hover,
     .btn[disabled]:hover,
     .btn:disabled:hover {
@@ -1689,6 +1701,41 @@ h2 {
   opacity: 1;
 }
 
+.toast {
+  position: fixed;
+  display: flex;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  flex-direction: column;
+  white-space: nowrap;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.toggle {
+  flex-shrink: 0;
+  --tglbg: var(--fallback-b1,oklch(var(--b1)/1));
+  --handleoffset: 1.5rem;
+  --handleoffsetcalculator: calc(var(--handleoffset) * -1);
+  --togglehandleborder: 0 0;
+  height: 1.5rem;
+  width: 3rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: var(--rounded-badge, 1.9rem);
+  border-width: 1px;
+  border-color: currentColor;
+  background-color: currentColor;
+  color: var(--fallback-bc,oklch(var(--bc)/0.5));
+  transition: background,
+    box-shadow var(--animation-input, 0.2s) ease-out;
+  box-shadow: var(--handleoffsetcalculator) 0 0 2px var(--tglbg) inset,
+    0 0 0 2px var(--tglbg) inset,
+    var(--togglehandleborder);
+}
+
 .alert-warning {
   border-color: var(--fallback-wa,oklch(var(--wa)/0.2));
   --tw-text-opacity: 1;
@@ -1765,12 +1812,21 @@ h2 {
   .btn-primary {
     --btn-color: var(--fallback-p);
   }
+
+  .btn-error {
+    --btn-color: var(--fallback-er);
+  }
 }
 
 @supports (color: color-mix(in oklab, black, black)) {
   .btn-outline.btn-primary.btn-active {
     background-color: color-mix(in oklab, var(--fallback-p,oklch(var(--p)/1)) 90%, black);
     border-color: color-mix(in oklab, var(--fallback-p,oklch(var(--p)/1)) 90%, black);
+  }
+
+  .btn-outline.btn-error.btn-active {
+    background-color: color-mix(in oklab, var(--fallback-er,oklch(var(--er)/1)) 90%, black);
+    border-color: color-mix(in oklab, var(--fallback-er,oklch(var(--er)/1)) 90%, black);
   }
 }
 
@@ -1790,6 +1846,16 @@ h2 {
   .btn-primary {
     --btn-color: var(--p);
   }
+
+  .btn-error {
+    --btn-color: var(--er);
+  }
+}
+
+.btn-error {
+  --tw-text-opacity: 1;
+  color: var(--fallback-erc,oklch(var(--erc)/var(--tw-text-opacity)));
+  outline-color: var(--fallback-er,oklch(var(--er)/1));
 }
 
 .btn.glass {
@@ -1828,6 +1894,16 @@ h2 {
 .btn-outline.btn-primary.btn-active {
   --tw-text-opacity: 1;
   color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
+}
+
+.btn-outline.btn-error {
+  --tw-text-opacity: 1;
+  color: var(--fallback-er,oklch(var(--er)/var(--tw-text-opacity)));
+}
+
+.btn-outline.btn-error.btn-active {
+  --tw-text-opacity: 1;
+  color: var(--fallback-erc,oklch(var(--erc)/var(--tw-text-opacity)));
 }
 
 .btn.btn-disabled,
@@ -2301,6 +2377,10 @@ h2 {
   transform: rotateY(0deg);
 }
 
+.toast > * {
+  animation: toast-pop 0.25s ease-out;
+}
+
 @keyframes toast-pop {
   0% {
     transform: scale(0.9);
@@ -2311,6 +2391,58 @@ h2 {
     transform: scale(1);
     opacity: 1;
   }
+}
+
+[dir="rtl"] .toggle {
+  --handleoffsetcalculator: calc(var(--handleoffset) * 1);
+}
+
+.toggle:focus-visible {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: var(--fallback-bc,oklch(var(--bc)/0.2));
+}
+
+.toggle:hover {
+  background-color: currentColor;
+}
+
+.toggle:checked,
+  .toggle[checked="true"],
+  .toggle[aria-checked="true"] {
+  background-image: none;
+  --handleoffsetcalculator: var(--handleoffset);
+  --tw-text-opacity: 1;
+  color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));
+}
+
+[dir="rtl"] .toggle:checked, [dir="rtl"] .toggle[checked="true"], [dir="rtl"] .toggle[aria-checked="true"] {
+  --handleoffsetcalculator: calc(var(--handleoffset) * -1);
+}
+
+.toggle:indeterminate {
+  --tw-text-opacity: 1;
+  color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));
+  box-shadow: calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset,
+      calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset,
+      0 0 0 2px var(--tglbg) inset;
+}
+
+[dir="rtl"] .toggle:indeterminate {
+  box-shadow: calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset,
+        calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset,
+        0 0 0 2px var(--tglbg) inset;
+}
+
+.toggle:disabled {
+  cursor: not-allowed;
+  --tw-border-opacity: 1;
+  border-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-border-opacity)));
+  background-color: transparent;
+  opacity: 0.3;
+  --togglehandleborder: 0 0 0 3px var(--fallback-bc,oklch(var(--bc)/1)) inset,
+      var(--handleoffsetcalculator) 0 0 3px var(--fallback-bc,oklch(var(--bc)/1)) inset;
 }
 
 .btn-xs {
@@ -2402,6 +2534,63 @@ h2 {
 
 .menu-horizontal > li:not(.menu-title) > details > ul {
   position: absolute;
+}
+
+:where(.toast) {
+  bottom: 0px;
+  inset-inline-end: 0px;
+  inset-inline-start: auto;
+  top: auto;
+  --tw-translate-x: 0px;
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.toast:where(.toast-start) {
+  inset-inline-end: auto;
+  inset-inline-start: 0px;
+  --tw-translate-x: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.toast:where(.toast-center) {
+  inset-inline-end: 50%;
+  inset-inline-start: 50%;
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+:is([dir="rtl"] .toast:where(.toast-center)) {
+  --tw-translate-x: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.toast:where(.toast-end) {
+  inset-inline-end: 0px;
+  inset-inline-start: auto;
+  --tw-translate-x: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.toast:where(.toast-bottom) {
+  bottom: 0px;
+  top: auto;
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.toast:where(.toast-middle) {
+  bottom: auto;
+  top: 50%;
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.toast:where(.toast-top) {
+  bottom: auto;
+  top: 0px;
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .avatar.online:before {
@@ -2676,6 +2865,22 @@ h2 {
   flex-grow: 1;
 }
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -2807,6 +3012,11 @@ h2 {
 .bg-gray-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
 }
 
 .bg-transparent {
@@ -3145,10 +3355,6 @@ h2 {
 
   .md\:w-2\/3 {
     width: 66.666667%;
-  }
-
-  .md\:w-auto {
-    width: auto;
   }
 
   .md\:grid-cols-2 {
