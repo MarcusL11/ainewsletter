@@ -212,6 +212,17 @@ html5lib = ["html5lib"]
 lxml = ["lxml"]
 
 [[package]]
+name = "cachetools"
+version = "5.3.3"
+description = "Extensible memoizing collections and decorators"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "cachetools-5.3.3-py3-none-any.whl", hash = "sha256:0abad1021d3f8325b2fc1d2e9c8b9c9d57b04c3932657a72465447332c24d945"},
+    {file = "cachetools-5.3.3.tar.gz", hash = "sha256:ba29e2dfa0b8b556606f097407ed1aa62080ee108ab0dc5ec9d6a723a007d105"},
+]
+
+[[package]]
 name = "certifi"
 version = "2024.2.2"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -488,6 +499,17 @@ marshmallow = ">=3.18.0,<4.0.0"
 typing-inspect = ">=0.4.0,<1"
 
 [[package]]
+name = "decorator"
+version = "5.1.1"
+description = "Decorators for Humans"
+optional = false
+python-versions = ">=3.5"
+files = [
+    {file = "decorator-5.1.1-py3-none-any.whl", hash = "sha256:b8c3f85900b9dc423225913c5aace94729fe1fa9763b38939a95226f02d37186"},
+    {file = "decorator-5.1.1.tar.gz", hash = "sha256:637996211036b6385ef91435e4fae22989472f9d571faba8927ba8253acbc330"},
+]
+
+[[package]]
 name = "deprecated"
 version = "1.2.14"
 description = "Python @deprecated decorator to deprecate old python classes, functions or methods."
@@ -565,6 +587,29 @@ django = ">=3.2.14"
 
 [package.extras]
 reload = ["django-browser-reload (>=1.12.1,<2.0.0)"]
+
+[[package]]
+name = "django-unicorn"
+version = "0.60.0"
+description = "A magical full-stack framework for Django."
+optional = false
+python-versions = ">=3.8,<4"
+files = [
+    {file = "django_unicorn-0.60.0-py3-none-any.whl", hash = "sha256:763eb7a654d9703398044dc697af381e8c6b4bf0e3c3e3806e6714d5ca50a592"},
+    {file = "django_unicorn-0.60.0.tar.gz", hash = "sha256:fe988e32dbf71a47435b456be6b6e146391af365097b8a51bfe56a2648822919"},
+]
+
+[package.dependencies]
+beautifulsoup4 = ">=4.8.0"
+cachetools = ">=4.1.1"
+decorator = ">=4.4.2"
+django = ">=2.2"
+orjson = ">=3.6.0"
+shortuuid = ">=1.0.1"
+
+[package.extras]
+docs = ["Sphinx", "furo", "linkify-it-py", "myst-parser", "rst2pdf", "sphinx-autoapi", "sphinx-autobuild", "sphinx-copybutton", "sphinxext-opengraph", "toml"]
+minify = ["htmlmin (>=0,<1)"]
 
 [[package]]
 name = "djlint"
@@ -1233,6 +1278,21 @@ cssselect = ["cssselect (>=0.7)"]
 html5 = ["html5lib"]
 htmlsoup = ["BeautifulSoup4"]
 source = ["Cython (>=3.0.7)"]
+
+[[package]]
+name = "markdown"
+version = "3.5.2"
+description = "Python implementation of John Gruber's Markdown."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "Markdown-3.5.2-py3-none-any.whl", hash = "sha256:d43323865d89fc0cb9b20c75fc8ad313af307cc087e84b657d9eec768eddeadd"},
+    {file = "Markdown-3.5.2.tar.gz", hash = "sha256:e1ac7b3dc550ee80e602e71c1d168002f062e49f1b11e26a36264dafd4df2ef8"},
+]
+
+[package.extras]
+docs = ["mdx-gh-links (>=0.2)", "mkdocs (>=1.5)", "mkdocs-gen-files", "mkdocs-literate-nav", "mkdocs-nature (>=0.6)", "mkdocs-section-index", "mkdocstrings[python]"]
+testing = ["coverage", "pyyaml"]
 
 [[package]]
 name = "markdown-it-py"
@@ -2012,6 +2072,17 @@ pygments = ">=2.13.0,<3.0.0"
 jupyter = ["ipywidgets (>=7.5.1,<9)"]
 
 [[package]]
+name = "shortuuid"
+version = "1.0.12"
+description = "A generator library for concise, unambiguous and URL-safe UUIDs."
+optional = false
+python-versions = ">=3.5"
+files = [
+    {file = "shortuuid-1.0.12-py3-none-any.whl", hash = "sha256:dd855d8c10ced5dc2790b97e31f16ad55a6f4871b478feb4351dd3128a8aa82b"},
+    {file = "shortuuid-1.0.12.tar.gz", hash = "sha256:c39f1b348b3c1e9b115a954b33b76c8c522d2d177a9d20acdbb20d24fac3ccfd"},
+]
+
+[[package]]
 name = "six"
 version = "1.16.0"
 description = "Python 2 and 3 compatibility utilities"
@@ -2519,4 +2590,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10.0,<3.12"
-content-hash = "e7fa4c1305de0fde5fa8cef3af08e966e3ea6f9c6ddaf69360e4804c1eb19bcd"
+content-hash = "ffe9ee0fb128c6e398f0d558fd394bab086837ce3f6fcf9e9be9f81d0965491f"
