@@ -1,11 +1,13 @@
 {% load static %}
+{% load blog_tags %}
+
 <div>
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {% for blog in blogs %}
         <div class="group shadow-xl overflow-hidden transition-all hover:shadow-none hover:scale-105  rounded-lg">
             <a href="{% url 'blog' slug=blog.slug %}" class="no-underline group flex flex-col h-full transition-all group-hover:brightness-110 rounded-lg">
                 <div class="w-full overflow-hidden rounded-t-lg">
-                    <img src="{% static 'image/blog-images/'|add:blog.slug|add:'.webp' %}" alt="{{ blog.slug }}" class="w-full object-cover" style="aspect-ratio: 16/9;" width="800" height="421">
+                    <img src="{% get_image_path blog.slug %}" alt="{{ blog.slug }}" class="w-full object-cover" style="aspect-ratio: 16/9;" width="800" height="421">
                 </div>
                 <div class="p-4 flex flex-col justify-between flex-grow">
                     <div>

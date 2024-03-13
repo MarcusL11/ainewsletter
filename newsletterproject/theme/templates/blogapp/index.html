@@ -1,5 +1,6 @@
 {% extends "../base.html" %}
 {% load static %}
+{% load blog_tags %}
 
 {% block title %}
 Home
@@ -16,7 +17,8 @@ Home
                         <a class="group relative flex w-full flex-col overflow-hidden rounded shadow-xl" href="{% url 'blog' slug=latest_blog.slug %}">
                             <div class="w-full overflow-hidden rounded-xs">
                                 <figure class="aspect-social relative">
-                                    <img src="{% static 'image/blog-images/'|add:latest_blog.slug|add:'.webp' %}" alt="{{ lateset_blog.slug }}" class="rounded-lg inset-0 min-w-full" width="800" height="421">
+                                    <img src="{% get_image_path latest_blog.slug %}" alt="{{ lateset_blog.slug }}" class="rounded-lg inset-0 min-w-full" width="800" height="421">                                 
+                                    
                                 </figure>
                             </div>
                             <div class="absolute top-6 left-6">

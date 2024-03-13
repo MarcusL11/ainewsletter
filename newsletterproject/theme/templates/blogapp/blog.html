@@ -1,5 +1,6 @@
 {% extends "../base.html" %}
 {% load static %}
+{% load blog_tags %}
 {% load blogapp_extras %}
 {% block title %}
 {{ blog.title }}
@@ -28,7 +29,7 @@
 
                 <!-- Blog Content -->
                 <figure class="px-10 pt-4">
-                  <img src="{% static 'image/blog-images/'|add:blog.slug|add:'.webp' %}" alt="{{ blog.slug }}" class="rounded-xl mx-8 mt-4 w-full" height="800" width="421" />
+                  <img src="{% get_image_path blog.slug %}" alt="{{ blog.slug }}" class="rounded-xl mx-8 mt-4 w-full" height="800" width="421" />
                 </figure>
 
                 <div class="card-body">
