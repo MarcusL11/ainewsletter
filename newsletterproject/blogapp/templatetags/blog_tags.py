@@ -11,4 +11,4 @@ def get_image_path(slug, formats=['.webp', '.png']):
         if finders.find(image_path):  # Use Django's staticfiles finders
             return static(image_path)
     # Return a default image or an indication that no image was found
-    return static('image/default.png')
+    return static('image/blog-images/default.webp')
